@@ -1,0 +1,235 @@
+@startuml
+
+/' diagram meta data start
+config=CallConfiguration;
+{
+  "rootMethod": "main.Main#inputIsBirds(ArrayList\u003cBird\u003e)",
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": true,
+    "cutInterfaceStructures": true,
+    "cutDataStructures": true,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 3,
+    "backwardDepth": 3,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showMethodParametersTypes": false,
+    "showMethodParametersNames": false,
+    "showMethodReturnType": false,
+    "showPackageLevels": 2,
+    "showCallOrder": false,
+    "edgeMode": "MethodsOnly", // TypesOnly, MethodsOnly, TypesAndMethods, MethodsAndDirectTypeUsage
+    "showDetailedClassStructure": false
+  },
+  "rootClass": "main.Main",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="LR"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1965718044 { 
+   	label=Animal
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1996620572 { 
+   	label=Cat
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Cat1965718044XXXsneak0[
+	label="+ sneak()"
+	style=filled
+	fillcolor=white
+	tooltip="Cat
+
+null"
+	fontcolor=darkgreen
+];
+
+Cat1965718044XXXstopSneak0[
+	label="+ stopSneak()"
+	style=filled
+	fillcolor=white
+	tooltip="Cat
+
+null"
+	fontcolor=darkgreen
+];
+} 
+
+subgraph cluster_366850514 { 
+   	label=Animal
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Animal1965718044XXXmoveDown0[
+	label="+ moveDown()"
+	style=filled
+	fillcolor=white
+	tooltip="Animal
+
+null"
+	fontcolor=darkgreen
+];
+
+Animal1965718044XXXmoveLeft0[
+	label="+ moveLeft()"
+	style=filled
+	fillcolor=white
+	tooltip="Animal
+
+null"
+	fontcolor=darkgreen
+];
+
+Animal1965718044XXXmoveRight0[
+	label="+ moveRight()"
+	style=filled
+	fillcolor=white
+	tooltip="Animal
+
+null"
+	fontcolor=darkgreen
+];
+
+Animal1965718044XXXmoveUp0[
+	label="+ moveUp()"
+	style=filled
+	fillcolor=white
+	tooltip="Animal
+
+null"
+	fontcolor=darkgreen
+];
+
+Animal1965718044XXXsneak0[
+	label="+ sneak()"
+	style=filled
+	fillcolor=white
+	tooltip="Animal
+
+null"
+	fontcolor=darkgreen
+];
+
+Animal1965718044XXXstopSneak0[
+	label="+ stopSneak()"
+	style=filled
+	fillcolor=white
+	tooltip="Animal
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+subgraph cluster_3343801 { 
+   	label=main
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_297445138 { 
+   	label=Main
+	labeljust=l
+	fillcolor=white
+	style=filled
+   
+   Main3343801XXXinputIsBirds1221211392[
+	label="+ inputIsBirds()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	penwidth=4
+	fontcolor=darkgreen
+];
+
+Main3343801XXXmain1859653459[
+	label="+ main()"
+	style=filled
+	fillcolor=white
+	tooltip="Main
+
+null"
+	fontcolor=darkgreen
+];
+} 
+} 
+
+'edges    
+Animal1965718044XXXsneak0 -> Cat1965718044XXXsneak0;
+Animal1965718044XXXstopSneak0 -> Cat1965718044XXXstopSneak0;
+Main3343801XXXinputIsBirds1221211392 -> Animal1965718044XXXmoveDown0;
+Main3343801XXXinputIsBirds1221211392 -> Animal1965718044XXXmoveLeft0;
+Main3343801XXXinputIsBirds1221211392 -> Animal1965718044XXXmoveRight0;
+Main3343801XXXinputIsBirds1221211392 -> Animal1965718044XXXmoveUp0;
+Main3343801XXXinputIsBirds1221211392 -> Animal1965718044XXXsneak0;
+Main3343801XXXinputIsBirds1221211392 -> Animal1965718044XXXstopSneak0;
+Main3343801XXXmain1859653459 -> Main3343801XXXinputIsBirds1221211392;
+    
+}
+@enduml
